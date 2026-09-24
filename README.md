@@ -52,10 +52,11 @@ python --version
 4. Search for a book
 5. Borrow a book
 6. Return a book
-7. Save and exit
+7. Remove a book
+8. Save and exit
 ```
 
-Type the number of the action you want and press Enter. Choose **7** to save your books and quit. **Your changes are only saved when you exit with option 7.**
+Type the number of the action you want and press Enter. Choose **7** to save your books and quit. **Your changes are only saved when you exit with option 8.**
 
 Titles must be typed exactly as saved (search is case-sensitive).
 
