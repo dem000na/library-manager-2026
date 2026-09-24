@@ -58,7 +58,7 @@ python --version
 
 Type the number of the action you want and press Enter. Choose **7** to save your books and quit. **Your changes are only saved when you exit with option 8.**
 
-Titles must be typed exactly as saved (search is case-sensitive).
+Titles search is not case-senesetive.
 
 ## Where is my data stored?
 
