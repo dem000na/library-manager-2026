@@ -103,6 +103,4 @@ library-manager/
 - Auto-save after every change
 - Unit tests with `pytest`
 
-## License
 
-Choose a license when creating the repository (MIT is a common choice for small projects).
