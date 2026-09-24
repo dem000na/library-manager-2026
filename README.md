@@ -9,7 +9,7 @@ This project was built to practice object-oriented programming (classes, methods
 - Add books with a title, author, and page count (with input validation)
 - View all books or only the available ones
 - Search for a book by title
-- Borrow and return books
+- Borrow, return and remove books
 - Data is saved to a `books.json` file and loaded on the next start
 
 ## Requirements
