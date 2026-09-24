@@ -75,7 +75,7 @@ class Library:
     def find_book(self, title: str) -> None:
         """Search for a book by exact title match and print it if found."""
         for book in self.books:
-            if title == book.title:
+            if title.lower() == book.title.lower():
                 print(book)
                 return
 
@@ -84,7 +84,7 @@ class Library:
     def borrow_book(self, title: str) -> None:
         """Mark a book as borrowed (is_available = False), if it exists and is free."""
         for book in self.books:
-            if title == book.title and book.is_available:
+            if title.lower() == book.title.lower() and book.is_available:
                 book.is_available = False
                 print(f"You borrowed {book.title} successfully!")
                 return
@@ -95,13 +95,26 @@ class Library:
     def return_book(self, title: str) -> None:
         """Mark a book as returned (is_available = True), if it exists and was borrowed."""
         for book in self.books:
-            if title == book.title and not book.is_available:
+            if title.lower() == book.title.lower() and not book.is_available:
                 book.is_available = True
                 print(f"You returned {book.title} successfully!")
                 return
 
         print(f"{title} is already available or was not found!")
         print("Check all books!")
+
+    def remove_book(self, title: str) -> None:
+        """Search for a book by exact title match and remove it if found."""
+        for book in self.books:
+            if title.lower() == book.title.lower():
+                self.books.remove(book)
+                print(f"{book.title} has been successfuly removed!")
+                return
+
+        print(f"{title} is not found!")
+        print("Check all books!")
+
+
 
 
 def show_menu() -> None:
@@ -113,7 +126,8 @@ def show_menu() -> None:
     print("4. Search for a book")
     print("5. Borrow a book")
     print("6. Return a book")
-    print("7. Save and exit")
+    print("7. Remove a book")
+    print("8. Save and exit")
     print(LINE)
 
 
@@ -201,22 +215,34 @@ def main() -> None:
         match choice:
             case 1:
                 lib.add_book(create_book())
+                save_file(DATA_FILE, lib)
+         
             case 2:
                 lib.all_books()
+         
             case 3:
                 lib.available_books()
+         
             case 4:
-                lib.find_book(name_choice())
+                lib.find_book(name_choice())       
             case 5:
                 lib.borrow_book(name_choice())
+                save_file(DATA_FILE, lib)
+
             case 6:
                 lib.return_book(name_choice())
-            case 7:
+                save_file(DATA_FILE, lib)
+
+            case 7 :
+                lib.remove_book(name_choice())
+                save_file(DATA_FILE, lib)
+
+            case 8:
                 save_file(DATA_FILE, lib)
                 print("Saved. See you again!")
                 break
             case _:
-                print("Enter a number between 1 and 7!")
+                print("Enter a number between 1 and 8!")
 
 
 if __name__ == "__main__":

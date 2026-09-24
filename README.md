@@ -98,9 +98,7 @@ library-manager/
 ## Ideas for improvement
 
 - Case-insensitive and partial title search
-- Remove / edit a book
 - Store the borrower's name and due date
-- Auto-save after every change
 - Unit tests with `pytest`
 
 
