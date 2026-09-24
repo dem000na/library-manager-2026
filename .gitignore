@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Your personal saved library data
+books.json
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
