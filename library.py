@@ -115,6 +115,10 @@ class Library:
         print("Check all books!")
 
 
+    def sort_books(self):
+        self.books.sort(key=lambda book: (book.title, book.author, -book.pages, -book.is_available))
+
+
 
 
 def show_menu() -> None:
@@ -215,6 +219,7 @@ def main() -> None:
         match choice:
             case 1:
                 lib.add_book(create_book())
+                lib.sort_books()
                 save_file(DATA_FILE, lib)
          
             case 2:
@@ -231,6 +236,7 @@ def main() -> None:
 
             case 6:
                 lib.return_book(name_choice())
+                lib.sort_books()
                 save_file(DATA_FILE, lib)
 
             case 7 :
