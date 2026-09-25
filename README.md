@@ -9,7 +9,7 @@ This project was built to practice object-oriented programming (classes, methods
 - Add books with a title, author, and page count (with input validation)
 - View all books or only the available ones
 - Search for a book by title
-- Borrow and return books
+- Borrow, return and remove books
 - Data is saved to a `books.json` file and loaded on the next start
 
 ## Requirements
@@ -56,7 +56,11 @@ python --version
 8. Save and exit
 ```
 
+<<<<<<< HEAD
 Type the number of the action you want and press Enter. Choose **8** to save your books and quit. **Your changes are only saved when you exit with option 8.**
+=======
+Type the number of the action you want and press Enter. Choose **7** to save your books and quit. **Your changes are only saved when you exit with option 8.**
+>>>>>>> 75466bc5be6dd73981914e2b39dd1695a3867a37
 
 Titles search is not case-senesetive.
 
